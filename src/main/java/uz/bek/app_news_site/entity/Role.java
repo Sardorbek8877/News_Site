@@ -5,9 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
-import org.springframework.security.core.userdetails.UserDetails;
 import uz.bek.app_news_site.entity.enums.Huquq;
-import uz.bek.app_news_site.entity.enums.RoleType;
 import uz.bek.app_news_site.entity.template.AbstractEntity;
 
 import java.util.List;
@@ -19,8 +17,10 @@ import java.util.List;
 @Entity
 public class Role extends AbstractEntity {
 
+    @Column(unique = true, nullable = false)
     private String name;
 
+    @Enumerated(value = EnumType.STRING)
     @ElementCollection
     private List<Huquq> huquqList;
 

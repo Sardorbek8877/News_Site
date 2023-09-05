@@ -59,4 +59,12 @@ public class User extends AbstractEntity implements UserDetails {
 //        }
         return grantedAuthorityList;
     }
+
+    public User(String fullName, String username, String password, Role role, boolean enabled) {
+        this.fullName = fullName;
+        this.username = username;
+        this.password = password;
+        this.role = role;
+        this.enabled = enabled;
+    }
 }
