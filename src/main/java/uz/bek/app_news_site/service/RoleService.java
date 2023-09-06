@@ -25,4 +25,8 @@ public class RoleService {
         roleRepository.save(role);
         return new ApiResponse("Role added", true);
     }
+
+    public ApiResponse editRole(Long id, RoleDto roleDto) {
+        return null;
+    }
 }
