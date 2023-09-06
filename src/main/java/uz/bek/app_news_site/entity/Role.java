@@ -24,6 +24,9 @@ public class Role extends AbstractEntity {
     @ElementCollection
     private List<Huquq> huquqList;
 
+    @Column(length = 600)
+    private String description;
+
 //    @Enumerated(value = EnumType.STRING)
 //    private RoleType roleType;
 }

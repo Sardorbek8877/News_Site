@@ -8,7 +8,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class RegisterDto {
+public class UserDto {
 
     @NotNull(message = "Full name must be not empty")
     private String fullName;
@@ -16,11 +16,9 @@ public class RegisterDto {
     @NotNull(message = "Username must be not empty")
     private String username;
 
-    @NotNull(message = "Password be not empty")
+    @NotNull(message = "Password must be not empty")
     private String password;
 
-    @NotNull(message = "Pre Password must be not empty")
-    private String prePassword;
-
-
+    @NotNull(message = "Role must be not empty")
+    private Integer roleId;
 }
